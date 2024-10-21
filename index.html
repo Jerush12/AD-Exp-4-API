@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video background -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="853779-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <div class="converter">
+            <input type="number" id="amount" placeholder="Enter amount" required>
+            <select id="fromCurrency">
+                <option value="">Select Currency</option>
+                <!-- Currency options will be populated dynamically -->
+            </select>
+            <select id="toCurrency">
+                <option value="">Select Currency</option>
+                <!-- Currency options will be populated dynamically -->
+            </select>
+            <button onclick="convertCurrency()">Convert</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Reset the margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body and html to occupy full screen height */
+body, html {
+    height: 100%;
+    font-family: 'Verdana', sans-serif; /* Change font for a fresh look */
+}
+
+/* Video container for handling video dimensions */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure video is behind all content */
+}
+
+/* Video settings to cover the entire screen */
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Make sure video covers the whole background without stretching */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+/* Main content container */
+.container {
+    position: relative;
+    z-index: 1; /* Make sure content is above the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff; /* White text for better visibility */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for contrast */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+}
+
+/* Heading style */
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #ffcc00; /* Bright color for headings */
+}
+
+/* Converter styles */
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between elements */
+}
+
+/* Input and select styles */
+input[type="number"], select {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #ffcc00; /* Bright border color */
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    background: #fff; /* White background for input */
+    color: #333; /* Dark text for input */
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #ff9900; /* Darker orange on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffcc00; /* Bright button color */
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect for button */
+}
+
+button:hover {
+    background-color: #ff9900; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Result styles */
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffcc00; /* Bright color for result text */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
